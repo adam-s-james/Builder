@@ -6,7 +6,8 @@ from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.widget import Widget
-
+from kivy.lang import builder
+from kivy.uix.screenmanager import ScreenManager, Screen
 
 class Medicine:
     def __init__(self, name, strength, form, admin_time_1, admin_time_2, admin_time_3, admin_time_4, admin_time_5):
@@ -37,7 +38,7 @@ class Alpha(Widget): #my root kivy widget, Mprime returns this widget
     def updateText(self): # seeupdates the original Label:button1 text to
         self.ids.label_1.text="Medicine added to your list!"
 
-# Main app ==== kivy - kv file musy be named (lowercase!) after this minus any "App" if this is part of the app name
+# Main app ==== kivy - kv file mus tbe named (lowercase!) after this minus any "App" if this is part of the app name
 class Mprime(App):
 
     def build(self):
